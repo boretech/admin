@@ -1,20 +1,23 @@
 ---
-name: Feature request
+name: 🚀 Feature request
 about: Suggest an idea for this project
 title: ''
-labels: ''
+labels: [':rocket: feather']
 assignees: ''
-
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+### Subject of the feature
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+Describe your issue here.
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+### Problem
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+If the feature requests relates to a problem, please describe the problem you are trying to solve here.
+
+### Expected behavior
+
+What should happen? Please describe the desired behavior.
+
+### Alternatives
+
+What are the alternative solutions? Please describe what else you have considered?

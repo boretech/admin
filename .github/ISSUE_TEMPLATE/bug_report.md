@@ -1,38 +1,28 @@
 ---
-name: Bug report
+name: 🐞 Bug report
 about: Create a report to help us improve
 title: ''
-labels: ''
+labels: [':beetle: bug']
 assignees: ''
-
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+**Before you start...**
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+- Read the [docs]( https://boretech.github.io/admin/docs).
+- Make sure the code is up to date. (Some bugs have been fixed in the latest code)
+- This is a concrete bug. For Q&A open a [GitHub Discussion](https://github.com/boretech/admin/discussions) or join our [Discord](https://discord.gg/KdFdrfUB) Chat Server.
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+### Describe the bug
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+A clear and concise description of what the bug is..
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+### Reproduction
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+Please describe the steps of the problem in detail to ensure that we can restore the correct problem
 
-**Additional context**
-Add any other context about the problem here.
+## System Info
+
+- Boretech Admin version:
+- Operating System:
+- Node version:
+- Package manager (npm/yarn/pnpm) and version:
