@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Discord Chat
+    url: https://discord.gg/KdFdrfUB
+    about: Ask questions and discuss with other Boretech Admin users in real time.
+  - name: Questions & Discussions
+    url: https://github.com/boretech/admin/discussions
+    about: Use GitHub discussions for message-board style questions and discussions.
