@@ -1,7 +1,22 @@
 {
   "name": "@boretech/admin",
   "version": "0.0.1",
-  "author": "Allen Wong",
+  "author": {
+    "name": "Allen Wong",
+    "email": "xiaofuyesnew@qq.com",
+    "url": "https://xiaofuyesnew.github.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boretech/admin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/boretech/admin/issues"
+  },
+  "homepage": "https://github.com/boretech/admin",
+  "engines": {
+    "node": ">=16"
+  },
   "license": "MIT",
   "type": "module",
   "scripts": {
@@ -39,5 +54,6 @@
     "vite-plugin-vue-setup-extend": "^0.4.0",
     "vite-plugin-windicss": "^1.8.4",
     "windicss": "^3.5.4"
-  }
+  },
+  "lint-staged": {}
 }
