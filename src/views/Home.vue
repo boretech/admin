@@ -10,5 +10,5 @@ export default {
 </script>
 
 <script setup>
-import logo from '@/assets/logo.svg'
+import logo from '@/assets/svg/logo.svg'
 </script>
