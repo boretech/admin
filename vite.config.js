@@ -2,10 +2,10 @@ import { resolve } from 'path'
 import dayjs from 'dayjs'
 import { loadEnv } from 'vite'
 
-import pkg from './package.json'
-import { wrapperEnv } from './build/utils'
-import { createProxy } from './build/vite/proxy'
-import { createVitePlugins } from './build/vite/plugin'
+import pkg from './package.json' assert {type: "json"}
+import { wrapperEnv } from './build/utils.js'
+import { createProxy } from './build/vite/proxy.js'
+import { createVitePlugins } from './build/vite/plugin/index.js'
 
 
 const root = process.cwd()
@@ -29,8 +29,8 @@ export default ({ command, mode }) => {
     resolve: {
       alias: [
         {
-          find: /\/@\//,
-          replacement: pathResolve('src') + '/',
+          find: /@\//,
+          replacement: `${pathResolve('src')}/`,
         },
       ]
     },

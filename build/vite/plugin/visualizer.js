@@ -1,7 +1,7 @@
 import visualizer from 'rollup-plugin-visualizer';
-import { isReportMode } from '../../utils';
+import { isReportMode } from '../../utils.js';
 
-export const configVisualizerConfig = () =>
+export const configVisualizer = () =>
   isReportMode() ?
     visualizer({
       filename: './node_modules/.cache/visualizer/stats.html',

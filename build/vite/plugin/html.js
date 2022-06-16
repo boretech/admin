@@ -1,5 +1,5 @@
 import { createHtmlPlugin } from 'vite-plugin-html'
-import pkg from '../../../package.json'
+import pkg from '../../../package.json' assert {type: "json"}
 
 export const configHtmlPlugin = (env, isBuild) => {
   const { VITE_GLOB_APP_TITLE, VITE_PUBLIC_PATH } = env
