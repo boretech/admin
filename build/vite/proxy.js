@@ -13,4 +13,5 @@ export const createProxy = (list = []) => {
       ...(isHttps ? { secure: false } : {})
     }
   }
+  return res
 }
