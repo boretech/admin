@@ -1,6 +1,6 @@
 <div align="center"><a href="https://github.com/boretech/admin"><img alt="BoretechAdmin Logo" width="200" height="200" src="./public/logo.svg"></a><br><br>
 
-![license](https://img.shields.io/github/license/boretech/admin?style=flat-square) ![version](https://img.shields.io/github/package-json/v/boretech/admin?style=flat-square)
+![license](https://img.shields.io/github/license/boretech/admin?style=flat-square) ![version](https://img.shields.io/github/package-json/v/boretech/admin?style=flat-square) ![node](https://img.shields.io/badge/node-%3E%3D%2016.15.0-brightgreen?style=flat-square)
 
 <h1>Boretech Admin</h1>
 </div>
