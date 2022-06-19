@@ -40,6 +40,7 @@
     "vue-router": "^4.0.16"
   },
   "devDependencies": {
+    "@iconify/json": "^2.1.63",
     "@vitejs/plugin-legacy": "^1.8.2",
     "@vitejs/plugin-vue": "^2.3.3",
     "dotenv": "^16.0.1",
