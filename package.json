@@ -1,0 +1,59 @@
+{
+  "name": "@boretech/admin",
+  "version": "2.0.0",
+  "description": "",
+  "license": "MIT",
+  "author": {
+    "name": "Allen Wong",
+    "email": "xiaofuyesnew@qq.com",
+    "url": "https://xiaofuyesnew.github.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boretech/admin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/boretech/admin/issues"
+  },
+  "homepage": "https://github.com/boretech/admin",
+  "engines": {
+    "node": ">=16"
+  },
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@element-plus/colors": "0.0.1-beta.7",
+    "@element-plus/icons-vue": "^2.0.6",
+    "axios": "^0.27.2",
+    "dayjs": "^1.11.3",
+    "echarts": "^5.3.3",
+    "element-plus": "^2.2.6",
+    "mockjs": "^1.1.0",
+    "pinia": "^2.0.14",
+    "qs": "^6.10.5",
+    "tinymce": "^6.0.3",
+    "vue": "^3.2.37",
+    "vue-i18n": "^9.1.10",
+    "vue-router": "^4.0.16"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.3",
+    "rollup": "^2.75.7",
+    "unplugin-vue-define-options": "^0.6.1",
+    "vite": "^2.9.12",
+    "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-html": "^3.2.0",
+    "vite-plugin-imagemin": "^0.6.1",
+    "vite-plugin-mkcert": "^1.7.2",
+    "vite-plugin-mock": "^2.9.6",
+    "vite-plugin-svg-icons": "^2.0.1",
+    "vite-plugin-theme": "^0.8.6",
+    "vite-plugin-windicss": "^1.8.4",
+    "windicss": "^3.5.4"
+  }
+}
