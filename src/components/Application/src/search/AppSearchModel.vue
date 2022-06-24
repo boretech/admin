@@ -4,12 +4,12 @@
       <div :class="getClass" @click.stop v-if="visible">
         <div :class="`${prefixCls}-content`" v-click-outside="handleClose">
           <div :class="`${prefixCls}-input__wrapper`">
-            <a-input :class="`${prefixCls}-input`" :placeholder="t('common.searchText')" ref="inputRef" allow-clear
+            <el-input :class="`${prefixCls}-input`" :placeholder="t('common.searchText')" ref="inputRef" allow-clear
               @change="handleSearch">
               <template #prefix>
-                <SearchOutlined />
+                <Search />
               </template>
-            </a-input>
+            </el-input>
             <span :class="`${prefixCls}-cancel`" @click="handleClose">
               {{ t('common.cancelText') }}
             </span>
@@ -38,7 +38,7 @@
               </div>
             </li>
           </ul>
-          <AppSearchFooter />
+          <app-search-footer />
         </div>
       </div>
     </transition>
@@ -47,8 +47,8 @@
 
 <script setup>
 import { computed, unref, ref, watch, nextTick } from 'vue'
-import { SearchOutlined } from '@ant-design/icons-vue';
-import AppSearchFooter from './AppSearchFooter.vue';
+import { Search } from '@element-plus/icons-vue'
+import AppSearchFooter from './AppSearchFooter.vue'
 import Icon from '@/components/Icon';
 import vClickOutside from '@/directives/clickOutside';
 import { useDesign } from '@/hooks/web/useDesign';
