@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import router from '@/router'
+import { setupRouter } from '@/router'
 
 import 'virtual:windi-base.css'
 import 'virtual:windi-components.css'
@@ -22,6 +22,7 @@ const setup = async () => {
   // TODO: setup language await
 
   // TODO: setup router
+  setupRouter(app)
 
   // TODO: setup router guard
 
