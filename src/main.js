@@ -1,30 +1,30 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import { setupRouter } from '@/router'
+import { setupStore } from './store'
 
-import 'virtual:windi-base.css'
-import 'virtual:windi-components.css'
-
+import './tailwind.css'
+import 'element-plus/theme-chalk/dark/css-vars.css'
+// import './style/theme.scss'
 // temporary keep here
 // import 'element-plus/dist/index.css'
-
-import 'virtual:windi-utilities.css'
 
 const app = createApp(App)
 
 const setup = async () => {
-  // TODO: setup store
-
   // TODO: init App config
-
-  // TODO: register global components
 
   // TODO: setup language await
 
   // TODO: setup router
   setupRouter(app)
 
+  // TODO: setup store
+  setupStore(app)
+
   // TODO: setup router guard
+
+  // TODO: register global components
 
   // TODO: setup global directives?
 
