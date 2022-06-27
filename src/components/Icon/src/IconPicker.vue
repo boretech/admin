@@ -47,92 +47,88 @@
 <script setup>
 import { ref, watchEffect, watch, unref } from 'vue'
 import { useDesign } from '@/hooks/web/useDesign.js'
-import { ScrollContainer } from '@/components/Container.vue'
-import { Input, Popover, Pagination, Empty } from 'ant-design-vue';
-import Icon from './Icon.vue';
-import SvgIcon from './SvgIcon.vue';
-import iconsData from '../data/icons.data';
-import { propTypes } from '@/utils/propTypes';
-import { usePagination } from '@/hooks/web/usePagination';
-import { useDebounceFn } from '@vueuse/core';
-import { useI18n } from '@/hooks/web/useI18n';
-import { useCopyToClipboard } from '@/hooks/web/useCopyToClipboard';
-import { useMessage } from '@/hooks/web/useMessage';
-import svgIcons from 'virtual:svg-icons-names';
+import { ScrollContainer } from '@/components/Container/index.js'
+import { ElInput, ElPopover, ElPagination, ElEmpty } from 'element-plus'
+import Icon from './Icon.vue'
+import SvgIcon from './SvgIcon.vue'
+import iconsData from '../data/icons.data.js'
+import { usePagination } from '@/hooks/web/usePagination.js'
+import { useDebounceFn } from '@vueuse/core'
+import { useI18n } from '@/hooks/web/useI18n.js'
+import { useCopyToClipboard } from '@/hooks/web/useCopyToClipboard.js'
+import { useMessage } from '@/hooks/web/useMessage.js'
+import svgIcons from 'virtual:svg-icons-names'
 // 没有使用别名引入，是因为WebStorm当前版本还不能正确识别，会报unused警告
-const AInput = Input;
-const APopover = Popover;
-const APagination = Pagination;
-const AEmpty = Empty;
-function getIcons() {
-  const data = iconsData as any;
-  const prefix: string = data?.prefix ?? '';
-  let result: string[] = [];
+const getIcons = () => {
+  const data = iconsData
+  const prefix = data?.prefix ?? ''
+  let result = []
   if (prefix) {
-    result = (data?.icons ?? []).map((item) => `${prefix}:${item}`);
+    result = (data?.icons ?? []).map((item) => `${prefix}:${item}`)
   } else if (Array.isArray(iconsData)) {
-    result = iconsData as string[];
+    result = iconsData
   }
-  return result;
+  return result
 }
-function getSvgIcons() {
-  return svgIcons.map((icon) => icon.replace('icon-', ''));
+const getSvgIcons = () => {
+  return svgIcons.map((icon) => icon.replace('icon-', ''))
 }
 const props = defineProps({
   value: propTypes.string,
   width: propTypes.string.def('100%'),
   pageSize: propTypes.number.def(140),
   copy: propTypes.bool.def(false),
-  mode: propTypes.oneOf<('svg' | 'iconify')[]>(['svg', 'iconify']).def('iconify'),
-});
-const emit = defineEmits(['change', 'update:value']);
-const isSvgMode = props.mode === 'svg';
-const icons = isSvgMode ? getSvgIcons() : getIcons();
-const currentSelect = ref('');
-const visible = ref(false);
-const currentList = ref(icons);
-const { t } = useI18n();
-const { prefixCls } = useDesign('icon-picker');
-const debounceHandleSearchChange = useDebounceFn(handleSearchChange, 100);
-const { clipboardRef, isSuccessRef } = useCopyToClipboard(props.value);
-const { createMessage } = useMessage();
+  mode: propTypes.oneOf(['svg', 'iconify']).def('iconify'),
+})
+const emit = defineEmits(['change', 'update:value'])
+const isSvgMode = props.mode === 'svg'
+const icons = isSvgMode ? getSvgIcons() : getIcons()
+const currentSelect = ref('')
+const visible = ref(false)
+const currentList = ref(icons)
+const { t } = useI18n()
+const { prefixCls } = useDesign('icon-picker')
+const debounceHandleSearchChange = useDebounceFn(handleSearchChange, 100)
+const { clipboardRef, isSuccessRef } = useCopyToClipboard(props.value)
+const { createMessage } = useMessage()
 const { getPaginationList, getTotal, setCurrentPage } = usePagination(
   currentList,
   props.pageSize,
-);
+)
 watchEffect(() => {
-  currentSelect.value = props.value;
-});
+  currentSelect.value = props.value
+})
 watch(
   () => currentSelect.value,
   (v) => {
-    emit('update:value', v);
-    return emit('change', v);
+    emit('update:value', v)
+    return emit('change', v)
   },
-);
-function handlePageChange(page: number) {
-  setCurrentPage(page);
+)
+const handlePageChange = (page) => {
+  setCurrentPage(page)
 }
-function handleClick(icon: string) {
-  currentSelect.value = icon;
+const handleClick = (icon) => {
+  currentSelect.value = icon
   if (props.copy) {
-    clipboardRef.value = icon;
+    clipboardRef.value = icon
     if (unref(isSuccessRef)) {
-      createMessage.success(t('component.icon.copy'));
+      createMessage.success(t('component.icon.copy'))
     }
   }
 }
-function handleSearchChange(e: ChangeEvent) {
-  const value = e.target.value;
+const handleSearchChange = (e) => {
+  const value = e.target.value
   if (!value) {
-    setCurrentPage(1);
-    currentList.value = icons;
-    return;
+    setCurrentPage(1)
+    currentList.value = icons
+    return
   }
-  currentList.value = icons.filter((item) => item.includes(value));
+  currentList.value = icons.filter((item) => item.includes(value))
 }
 </script>
-<style lang="less">
+
+<style lang="sass">
 @prefix-cls: ~'@{namespace}-icon-picker';
 
 .@{prefix-cls} {

@@ -24,6 +24,7 @@ specifiers:
   picocolors: ^1.0.0
   pinia: ^2.0.14
   qs: ^6.10.5
+  resize-observer-polyfill: ^1.5.1
   rollup: ^2.75.6
   rollup-plugin-visualizer: ^5.6.0
   sass: ^1.52.3
@@ -61,6 +62,7 @@ dependencies:
   path-to-regexp: 6.2.1
   pinia: 2.0.14_vue@3.2.37
   qs: 6.10.5
+  resize-observer-polyfill: 1.5.1
   vue: 3.2.37
   vue-i18n: 9.1.10_vue@3.2.37
   vue-router: 4.0.16_vue@3.2.37
@@ -6059,6 +6061,10 @@ packages:
     resolution: {integrity: sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==}
     engines: {node: '>=0.10.0'}
     dev: true
+
+  /resize-observer-polyfill/1.5.1:
+    resolution: {integrity: sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==}
+    dev: false
 
   /resolve-url/0.2.1:
     resolution: {integrity: sha512-ZuF55hVUQaaczgOIwqWzkEcEidmlD/xl44x1UZnhOXcYuFN2S6+rcxpG+C1N3So0wvNI3DmJICUFfu2SxhBmvg==}
