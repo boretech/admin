@@ -1,9 +1,10 @@
 <template>
-  <div>111</div>
+  <ElButton type="primary" @click="changeTheme">切换主题</ElButton>
 </template>
 
 <script setup>
-import { } from 'vue'
+import { useDark, useToggle } from '@vueuse/core'
+import {} from 'vue'
 
 defineOptions({
   name: 'Home'
@@ -14,5 +15,16 @@ defineOptions({
 //   name: 'Test'
 // })
 
+const isDark = useDark({
+  selector: 'html',
+  attribute: 'class',
+  valueDark: 'dark',
+  valueLight: 'light',
+})
+
+const changeTheme = () => {
+  useToggle(isDark)
+  console.log(isDark)
+}
 
 </script>
