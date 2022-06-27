@@ -5,6 +5,7 @@ specifiers:
   '@element-plus/icons-vue': ^2.0.4
   '@iconify/iconify': ^2.2.1
   '@iconify/json': ^2.1.63
+  '@purge-icons/generated': ^0.8.1
   '@vitejs/plugin-legacy': ^1.8.2
   '@vitejs/plugin-vue': ^2.3.3
   '@vueuse/core': ^8.7.4
@@ -18,6 +19,7 @@ specifiers:
   inquirer: ^9.0.0
   lodash-es: ^4.17.21
   mockjs: ^1.1.0
+  nprogress: ^0.2.0
   path-to-regexp: ^6.2.1
   picocolors: ^1.0.0
   pinia: ^2.0.14
@@ -55,6 +57,7 @@ dependencies:
   element-plus: 2.2.5_vue@3.2.37
   lodash-es: 4.17.21
   mockjs: 1.1.0
+  nprogress: 0.2.0
   path-to-regexp: 6.2.1
   pinia: 2.0.14_vue@3.2.37
   qs: 6.10.5
@@ -64,6 +67,7 @@ dependencies:
 
 devDependencies:
   '@iconify/json': 2.1.63
+  '@purge-icons/generated': 0.8.1
   '@vitejs/plugin-legacy': 1.8.2_vite@2.9.12
   '@vitejs/plugin-vue': 2.3.3_vite@2.9.12+vue@3.2.37
   dotenv: 16.0.1
@@ -5409,6 +5413,10 @@ packages:
     dependencies:
       path-key: 3.1.1
     dev: true
+
+  /nprogress/0.2.0:
+    resolution: {integrity: sha512-I19aIingLgR1fmhftnbWWO3dXc0hSxqHQHQb3H8m+K3TnEn/iSeTZZOyvKXWqQESMwuUVnatlCnZdLBZZt2VSA==}
+    dev: false
 
   /nth-check/2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}

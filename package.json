@@ -35,6 +35,7 @@
     "element-plus": "^2.2.5",
     "lodash-es": "^4.17.21",
     "mockjs": "^1.1.0",
+    "nprogress": "^0.2.0",
     "path-to-regexp": "^6.2.1",
     "pinia": "^2.0.14",
     "qs": "^6.10.5",
@@ -44,6 +45,7 @@
   },
   "devDependencies": {
     "@iconify/json": "^2.1.63",
+    "@purge-icons/generated": "^0.8.1",
     "@vitejs/plugin-legacy": "^1.8.2",
     "@vitejs/plugin-vue": "^2.3.3",
     "dotenv": "^16.0.1",

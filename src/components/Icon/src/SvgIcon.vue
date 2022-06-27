@@ -3,6 +3,7 @@
     <use :xlink:href="symbolId" />
   </svg>
 </template>
+
 <script>
 import { defineComponent, computed } from 'vue'
 import { useDesign } from '@/hooks/web/useDesign.js'
