@@ -16,7 +16,7 @@ const APPInfo = {
   lastBuildTime: dayjs().format('YYYY-MM-DD HH:mm:ss')
 }
 
-export default defineConfig(async ({ command, mode }) => {
+export default defineConfig(({ command, mode }) => {
   const root = process.cwd()
   const env = generateEnv(loadEnv(mode, root))
   const { VITE_PORT, VITE_BASE, VITE_PROXY, VITE_DROP_CONSOLE, VITE_HTTPS, VITE_OPEN_BROWSER, VITE_OUTPUT } = env
@@ -38,12 +38,12 @@ export default defineConfig(async ({ command, mode }) => {
       host: true,
       open: VITE_OPEN_BROWSER,
       port: VITE_PORT,
-      proxy: createViteProxy(VITE_PROXY)
+      proxy: createViteProxy(VITE_PROXY, isProduction)
     },
     build: {
       target: 'es2015',
       cssTarget: 'chrome80',
-      outDir: VITE_OUTPUT,
+      outDir: VITE_OUTPUT || 'dist',
       chunkSizeWarningLimit: 2000,
     },
     esbuild: {
@@ -51,7 +51,9 @@ export default defineConfig(async ({ command, mode }) => {
     },
     css: {
       preprocessorOptions: {
-        scss: {}
+        scss: {
+          // additionalData: `@use "@/style/theme.scss" as *;`
+        }
       }
     },
     plugins: createVitePlugins(env, isProduction),
