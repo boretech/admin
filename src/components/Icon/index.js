@@ -1,5 +1,10 @@
-import Moon from './src/Moon.vue'
-import Sunny from './src/Sunny.vue'
+import Icon from './src/Icon.vue'
+import SvgIcon from './src/SvgIcon.vue'
+import IconPicker from './src/IconPicker.vue'
 
-export const ThemeIconMoon = Moon
-export const ThemeIconSunny = Sunny
+import ThemeIconMoon from './src/Moon.vue'
+import ThemeIconSunny from './src/Sunny.vue'
+
+export { ThemeIconMoon, ThemeIconSunny, SvgIcon, IconPicker }
+
+export default Icon

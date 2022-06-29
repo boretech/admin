@@ -5,6 +5,7 @@ specifiers:
   '@element-plus/icons-vue': ^2.0.6
   '@iconify/iconify': ^2.2.1
   '@iconify/json': ^2.1.69
+  '@iconify/vue': ^3.2.1
   '@vitejs/plugin-vue': ^2.3.3
   '@vueuse/core': ^8.7.5
   autoprefixer: ^10.4.7
@@ -46,6 +47,7 @@ dependencies:
   '@element-plus/colors': 0.0.1-beta.7
   '@element-plus/icons-vue': 2.0.6_vue@3.2.37
   '@iconify/iconify': 2.2.1
+  '@iconify/vue': 3.2.1_vue@3.2.37
   '@vueuse/core': 8.7.5_vue@3.2.37
   axios: 0.27.2
   dayjs: 1.11.3
@@ -194,6 +196,14 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@iconify/vue/3.2.1_vue@3.2.37:
+    resolution: {integrity: sha512-c4R6ZgFo1JrJ8aPMMgOPgfU7lBswihMGR+yWe/P4ZukC3kTkeT4+lkt9Pc/itVFMkwva/S/7u9YofmYv57fnNQ==}
+    peerDependencies:
+      vue: 3.x
+    dependencies:
+      vue: 3.2.37
+    dev: false
 
   /@intlify/core-base/9.1.10:
     resolution: {integrity: sha512-So9CNUavB/IsZ+zBmk2Cv6McQp6vc2wbGi1S0XQmJ8Vz+UFcNn9MFXAe9gY67PreIHrbLsLxDD0cwo1qsxM1Nw==}

@@ -2,12 +2,12 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import { setupRouter } from '@/router'
 import { setupStore } from './store'
+import { setupGlobalComponents } from './utils'
 
 import './tailwind.css'
 import 'element-plus/theme-chalk/dark/css-vars.css'
-// import './style/theme.scss'
-// temporary keep here
-// import 'element-plus/dist/index.css'
+
+import 'virtual:svg-icons-register'
 
 const app = createApp(App)
 
@@ -22,9 +22,8 @@ const setup = async () => {
   // TODO: setup store
   setupStore(app)
 
-  // TODO: setup router guard
-
   // TODO: register global components
+  setupGlobalComponents(app)
 
   // TODO: setup global directives?
 

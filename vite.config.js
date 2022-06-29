@@ -22,7 +22,7 @@ export default defineConfig(({ command, mode }) => {
   const { VITE_PORT, VITE_BASE, VITE_PROXY, VITE_DROP_CONSOLE, VITE_HTTPS, VITE_OPEN_BROWSER, VITE_OUTPUT } = env
   const isProduction = process.env.NODE_ENV === 'production'
 
-  console.log(process.env.NODE_ENV)
+  // console.log(process.env.NODE_ENV)
 
   return {
     root,
