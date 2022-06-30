@@ -14,7 +14,10 @@ module.exports = {
     node: true
   },
 
-  plugins: ['vue'],
+  plugins: [
+    'vue',
+    'html'
+  ],
 
   globals: {
     document: false,
