@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-import { useLocaleStore } from '@/store'
+import { useLocaleStore } from '@/store/modules'
 defineOptions({
   name: 'App'
 })

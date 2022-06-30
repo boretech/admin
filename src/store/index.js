@@ -1,7 +1,7 @@
 import { createPinia } from 'pinia'
 
-export * from './modules'
+export const store = createPinia()
 
 export const setupStore = (app) => {
-  app.use(createPinia())
+  app.use(store)
 }

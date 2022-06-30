@@ -47,6 +47,11 @@ export default defineConfig(({ command, mode }) => {
       cssTarget: 'chrome80',
       outDir: VITE_OUTPUT || 'dist',
       chunkSizeWarningLimit: 2000,
+      commonjsOptions: {
+        include: [
+          'node_modules/crypto-js'
+        ]
+      }
     },
     esbuild: {
       pure: isProduction ? (VITE_DROP_CONSOLE ? ['console.log', 'debugger'] : []) : []
@@ -60,7 +65,8 @@ export default defineConfig(({ command, mode }) => {
     },
     plugins: createVitePlugins(env, isProduction),
     optimizeDeps: {
-      include: []
+      include: [],
+
     }
   }
 })

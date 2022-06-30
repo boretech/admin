@@ -1,29 +1,35 @@
 import { defineStore } from 'pinia'
-import zhCn from 'element-plus/es/locale/lang/zh-cn'
-import en from 'element-plus/es/locale/lang/en'
 
-const langSet = {
-  'zh-cn': zhCn,
-  'en': en
-}
+import { store } from '@/store'
+import { LOCALE_KEY } from '@/settings/enum/cache'
+import {} from '@/utils/storage'
+import { localeSetting } from '@/settings'
+
+const localStorage = createLocalStorage() || null
+
+const LocaleSetting = localStorage.get(LOCALE_KEY) || localeSetting
 
 export const useLocaleStore = defineStore('locale', {
   state: () => ({
-    locale: 'zh-cn',
-    ElLocale: zhCn
+    localeInfo: LocaleSetting
   }),
   getters: {
+    getShowPicker() {
+      return !!this.localeInfo?.showPicker
+    },
     getLocale() {
-      return {
-        locale: this.locale,
-        ElLocale: this.ElLocale
-      }
+      return this.localeInfo?.locale || 'zh_CN'
     }
   },
   actions: {
-    changeLocale(locale) {
-      this.locale = locale
-      this.ElLocale = langSet[locale]
+    setLocaleInfo(info) {
+      this.localeInfo = { ...this.localeInfo, ...info }
+      localStorage.set(LOCALE_KEY, this.localeInfo)
+    },
+    initLocale() {
+      this.setLocaleInfo(localeSetting)
     }
   }
 })
+
+export const setupLocaleStore = () => useLocaleStore(store)

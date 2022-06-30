@@ -12,6 +12,7 @@ specifiers:
   axios: ^0.27.2
   chalk: ^5.0.1
   cross-env: ^7.0.3
+  crypto-js: ^4.1.1
   dayjs: ^1.11.3
   dotenv: ^16.0.1
   echarts: ^5.3.3
@@ -50,6 +51,7 @@ dependencies:
   '@iconify/vue': 3.2.1_vue@3.2.37
   '@vueuse/core': 8.7.5_vue@3.2.37
   axios: 0.27.2
+  crypto-js: 4.1.1
   dayjs: 1.11.3
   echarts: 5.3.3
   element-plus: 2.2.6_vue@3.2.37
@@ -1417,6 +1419,10 @@ packages:
       shebang-command: 2.0.0
       which: 2.0.2
     dev: true
+
+  /crypto-js/4.1.1:
+    resolution: {integrity: sha512-o2JlM7ydqd3Qk9CA0L4NL6mTzU2sdx96a+oOfPu8Mkl/PK51vSyoi8/rQ8NknZtk44vq15lmhAj9CIAGwgeWKw==}
+    dev: false
 
   /css-select/4.3.0:
     resolution: {integrity: sha512-wPpOYtnsVontu2mODhA19JrqWxNsfdatRKd64kmpRbQgh1KtItko5sTnEpPdpSaJszTOhEMlF/RPz28qj4HqhQ==}
