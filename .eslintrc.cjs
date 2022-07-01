@@ -1,11 +1,12 @@
 module.exports = {
   parserOptions: {
-    ecmaVersion: 6,
+    ecmaVersion: 2020,
     ecmaFeatures: {
       experimentalObjectRestSpread: true,
       jsx: true
     },
-    sourceType: 'module'
+    sourceType: 'module',
+    allowImportExportEverywhere: true
   },
 
   env: {
@@ -18,6 +19,8 @@ module.exports = {
     'vue',
     'html'
   ],
+
+  extends: ['plugin:vue/recommended'],
 
   globals: {
     document: false,
@@ -104,7 +107,7 @@ module.exports = {
     'no-this-before-super': 2,
     'no-throw-literal': 2,
     'no-trailing-spaces': 2,
-    'no-undef': 2,
+    'no-undef': [2, { ignores: ['defineOptions'] }],
     'no-undef-init': 2,
     'no-unexpected-multiline': 2,
     'no-unmodified-loop-condition': 2,
@@ -140,6 +143,8 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     'object-curly-spacing': [2, 'always', { objectsInObjects: true }],
     'array-bracket-spacing': [2, 'never'],
-    'vue/jsx-uses-vars': 2
+    'vue/jsx-uses-vars': 2,
+    'vue/multi-word-component-names': 0,
+    'vue/no-multiple-template-root': 0
   }
 }

@@ -1,8 +1,9 @@
 module.exports = {
   content: [
     './index.html',
-    './src/**/*.{mjs,js,vue,jsx}'
+    './src/**/*.{js,vue}'
   ],
+  darkMode: 'class',
   theme: {
     extend: {}
   },
