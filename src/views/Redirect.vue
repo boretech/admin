@@ -1,5 +1,15 @@
 <template>
-  <div class="text-dark-50 dark:text-light-50">
-    正在跳转
-  </div>
+  <div></div>
 </template>
+
+<script setup>
+const route = useRoute()
+const router = useRouter()
+const { params, query } = route
+console.log(params)
+console.log(query)
+router.replace({
+  path: decodeURIComponent(params.path),
+  query
+})
+</script>

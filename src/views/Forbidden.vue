@@ -5,9 +5,9 @@
       401
     </div>
     <div class="text-4xl mt-10 mb-20 font-color">
-      抱歉，您无权访问该页面
+      抱歉，您没有访问此页面的权限
     </div>
-    <router-link :to="`/redirect?path=${encodeURIComponent('/dashboard')}`">
+    <router-link :to="`/redirect/${encodeURIComponent('/dashboard')}`">
       <el-button type="primary">
         返回首页
       </el-button>

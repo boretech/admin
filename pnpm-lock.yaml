@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@element-plus/colors': 0.0.1-beta.7
   '@element-plus/icons-vue': ^2.0.6
   '@iconify/iconify': ^2.2.1
   '@iconify/json': ^2.1.70
@@ -40,6 +41,7 @@ specifiers:
   vue-router: ^4.0.16
 
 dependencies:
+  '@element-plus/colors': 0.0.1-beta.7
   '@element-plus/icons-vue': 2.0.6_vue@3.2.37
   '@iconify/iconify': 2.2.1
   '@iconify/vue': 3.2.1_vue@3.2.37
@@ -114,6 +116,12 @@ packages:
   /@ctrl/tinycolor/3.4.1:
     resolution: {integrity: sha512-ej5oVy6lykXsvieQtqZxCOaLT+xD4+QNarq78cIYISHmZXshCvROLudpQN3lfL8G0NL7plMSSK+zlyvCaIJ4Iw==}
     engines: {node: '>=10'}
+    dev: false
+
+  /@element-plus/colors/0.0.1-beta.7:
+    resolution: {integrity: sha512-TpPc9GPpF2rsG13uNsqIRnnzJCztIJbHt0csQn2i+CA21kgitH1ocrM5I5sxY+62Km10ojqMzunFHAK0FN50lw==}
+    dependencies:
+      '@ctrl/tinycolor': 3.4.1
     dev: false
 
   /@element-plus/icons-vue/2.0.6_vue@3.2.37:

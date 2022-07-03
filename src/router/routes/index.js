@@ -19,7 +19,7 @@ const staticRoutes = Object.keys(modules)
     return acc.concat(routes)
   }, [])
 
-  console.log(basicRoutes)
+  // console.log(basicRoutes)
 
 export default [
   ...basicRoutes,

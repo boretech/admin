@@ -7,7 +7,7 @@
     <div class="text-4xl mt-10 mb-20 font-color">
       糟糕，您访问的页面好像不存在...
     </div>
-    <router-link :to="`/redirect?path=${encodeURIComponent('/dashboard')}`">
+    <router-link :to="`/redirect/${encodeURIComponent('/dashboard')}`">
       <el-button type="primary">
         返回首页
       </el-button>

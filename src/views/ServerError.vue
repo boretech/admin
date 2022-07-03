@@ -7,7 +7,7 @@
     <div class="text-4xl mt-10 mb-20 font-color">
       服务器出现了亿点点问题...
     </div>
-    <router-link :to="`/redirect?path=${encodeURIComponent('/dashboard')}`">
+    <router-link :to="`/redirect/${encodeURIComponent('/dashboard/test')}`">
       <el-button type="primary">
         返回首页
       </el-button>

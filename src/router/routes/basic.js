@@ -5,6 +5,7 @@ export const basicRoutes = [
     path: '/',
     name: 'Root',
     component: Layout,
+    redirect: '/dashboard',
     meta: {
       title: import.meta.env.VITE_APP_NAME
     },
@@ -32,8 +33,21 @@ export const basicRoutes = [
         meta: {
           title: '服务器错误'
         }
+      },
+      {
+        path: 'dashboard',
+        name: 'Dashboard',
+        component: () => import('@/views/dashboard/index.vue')
       }
     ]
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: () => import('@/views/Login.vue'),
+    meta: {
+      title: '登录'
+    }
   },
   {
     path: '/redirect/:path(.*)',
@@ -42,5 +56,10 @@ export const basicRoutes = [
     meta: {
       title: '正在跳转'
     }
+  },
+  {
+    path: '/:path(.*)*',
+    name: 'NoSuchPage',
+    redirect: `/redirect/${encodeURIComponent('/404')}`,
   }
 ]
