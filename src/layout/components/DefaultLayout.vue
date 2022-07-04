@@ -1,6 +1,9 @@
 <template>
   <el-container class="w-screen h-screen overflow-hidden">
-    <el-aside width="210px">
+    <el-aside
+      class="flex flex-col"
+      width="210px"
+    >
       <app-logo />
       <app-menu />
     </el-aside>

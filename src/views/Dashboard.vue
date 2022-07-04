@@ -1,5 +1,9 @@
 <template>
-  <i-ep-apple style="font-size:16px;" />
+  <i-ep-apple
+    width="32"
+    height="32"
+    style="color:#ff0;"
+  />
   <icon icon="logo" />
   <icon icon="ep:apple" />
 </template>
