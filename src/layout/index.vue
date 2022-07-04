@@ -6,7 +6,7 @@
 
 <script setup>
 import { useAppStore } from '@/stores/app'
-import { generateColors } from '@element-plus/colors'
+// import { generateColors } from '@element-plus/colors'
 import { computed } from 'vue'
 import { getLayout } from './components'
 
@@ -22,12 +22,12 @@ const elPrimaryColor = ref('#409eff')
 
 const elHeaderColor = ref('#999')
 
-const changeColor = () => {
-  elPrimaryColor.value = '#f00'
-  console.log(generateColors('#ff0'))
-  console.log(elPrimaryColor.value)
-  document.documentElement.style.setProperty('--el-color-primary', '#f00');
-}
+// const changeColor = () => {
+//   elPrimaryColor.value = '#f00'
+//   console.log(generateColors('#ff0'))
+//   console.log(elPrimaryColor.value)
+//   document.documentElement.style.setProperty('--el-color-primary', '#f00')
+// }
 
 </script>
 

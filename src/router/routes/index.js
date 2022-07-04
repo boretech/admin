@@ -2,7 +2,7 @@ import { basicRoutes } from './basic'
 
 const modules = import.meta.globEager('./modules/**/*.js')
 
-const staticRoutes = Object.keys(modules)
+const asyncRoutes = Object.keys(modules)
   .reduce((acc, item) => {
     const module = modules[item]
     const routes = Object.keys(module).reduce((acc, item) => {
@@ -19,9 +19,9 @@ const staticRoutes = Object.keys(modules)
     return acc.concat(routes)
   }, [])
 
-  // console.log(basicRoutes)
+// console.log(basicRoutes)
 
 export default [
   ...basicRoutes,
-  ...staticRoutes
+  ...asyncRoutes
 ]

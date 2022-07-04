@@ -24,7 +24,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview --mode staging",
-    "lint": "",
+    "lint": "pnpm exec eslint --ext .js,.vue --fix src",
     "gen:icon": "node ./build/generator/icon.js"
   },
   "devDependencies": {

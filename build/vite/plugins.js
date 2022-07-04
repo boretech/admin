@@ -19,7 +19,12 @@ export const setupUnplugin = () => [
       'vue',
       'vue-router'
     ],
-    resolvers: [ElementPlusResolver()]
+    resolvers: [ElementPlusResolver()],
+    eslintrc: {
+      enabled: true,
+      filepath: './.eslintrc-auto-import.json',
+      globalsPropValue: true
+    }
   }),
   Components({
     resolvers: [

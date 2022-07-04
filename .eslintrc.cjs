@@ -20,12 +20,17 @@ module.exports = {
     'html'
   ],
 
-  extends: ['plugin:vue/recommended'],
+  extends: [
+    'eslint:recommended',
+    'plugin:vue/vue3-recommended',
+    '.eslintrc-auto-import.json'
+  ],
 
   globals: {
     document: false,
     navigator: false,
-    window: false
+    window: false,
+    defineOptions: false
   },
 
   rules: {
@@ -107,7 +112,7 @@ module.exports = {
     'no-this-before-super': 2,
     'no-throw-literal': 2,
     'no-trailing-spaces': 2,
-    'no-undef': [2, { ignores: ['defineOptions'] }],
+    'no-undef': 2,
     'no-undef-init': 2,
     'no-unexpected-multiline': 2,
     'no-unmodified-loop-condition': 2,
@@ -144,7 +149,6 @@ module.exports = {
     'object-curly-spacing': [2, 'always', { objectsInObjects: true }],
     'array-bracket-spacing': [2, 'never'],
     'vue/jsx-uses-vars': 2,
-    'vue/multi-word-component-names': 0,
-    'vue/no-multiple-template-root': 0
+    'vue/multi-word-component-names': 0
   }
 }

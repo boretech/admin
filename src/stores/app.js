@@ -4,11 +4,15 @@ export const useAppStore = defineStore({
   id: 'app',
   state: () => ({
     darkMode: 'dark',
-    layout: 'DefaultLayout'
+    layout: 'DefaultLayout',
+    appTitle: import.meta.env.VITE_APP_NAME
   }),
   getters: {
-    getLayout(state) {
+    getLayout (state) {
       return state.layout
+    },
+    getAppTitle (state) {
+      return state.appTitle
     }
   },
   actions: {

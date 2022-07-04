@@ -20,7 +20,7 @@ export default defineConfig(({ command, mode }) => {
   const root = process.cwd()
   const env = generateEnv(loadEnv(mode, root))
   const { VITE_PORT, VITE_BASE, VITE_PROXY, VITE_DROP_CONSOLE, VITE_HTTPS, VITE_OPEN, VITE_OUTPUT } = env
-  console.log(env)
+  // console.log(env)
   return {
     root,
     base: VITE_BASE || '/',

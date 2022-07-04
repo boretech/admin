@@ -10,13 +10,11 @@ export {
   TopMixedLayout
 }
 
-const layouts = {
+export const layouts = {
   DefaultLayout,
   LeftMixedLayout,
   TopLayout,
   TopMixedLayout
 }
-
-// console.log(layouts)
 
 export const getLayout = (key = 'DefaultLayout') => layouts[key]
