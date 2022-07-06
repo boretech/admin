@@ -1,7 +1,6 @@
 <template>
   <svg-icon
     v-if="isSvgIcon"
-    :class="[$attrs.class]"
     :icon="icon"
     :size="size"
     :spin="spin"
@@ -9,7 +8,7 @@
   />
   <iconify-vue
     v-else
-    :class="[$attrs.class, spin && 'iconify-spin']"
+    :class="[spin && 'iconify-spin']"
     :icon="icon"
     :width="size"
     :height="size"

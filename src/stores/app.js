@@ -5,7 +5,8 @@ export const useAppStore = defineStore('app', {
     darkMode: 'dark',
     layout: 'DefaultLayout',
     menuCollapse: false,
-    appTitle: import.meta.env.VITE_APP_NAME
+    appTitle: import.meta.env.VITE_APP_NAME,
+    tagsViewEnable: true
   }),
   getters: {
     getLayout () {

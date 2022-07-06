@@ -3,3 +3,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.el-header {
+  --el-header-padding: 0 10px;
+}
+
+.el-main {
+  --el-main-padding: 10px;
+}
+
+.el-breadcrumb__inner {
+  display: flex;
+  align-items: center;
+}
