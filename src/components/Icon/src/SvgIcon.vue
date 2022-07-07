@@ -39,7 +39,7 @@ const symbolId = computed(() => `#i-${props.icon}`)
 
 <style lang="scss" scoped>
 .svg {
-  object-fit: contain;
+  // object-fit: contain;
 
   &-icon-spin {
     animation: svg-spin 1s infinite linear;

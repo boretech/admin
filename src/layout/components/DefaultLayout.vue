@@ -1,24 +1,14 @@
 <template>
   <el-container class="w-screen h-screen overflow-hidden">
     <el-aside
-      class="flex flex-col"
-      width="210px"
+      class="flex flex-col transition-all menu-bg"
+      :style="{ width: menuCollapse ? '64px' : '210px' }"
     >
-      <app-logo />
       <app-menu />
     </el-aside>
     <el-container>
-      <el-header>
-        <div class="text">
-          测试
-        </div>
-        <div class="box" />
-        <el-button
-          type="primary"
-          @click="changeColor"
-        >
-          改变主题颜色
-        </el-button>
+      <el-header class="header-bg">
+        <app-header />
       </el-header>
       <el-main>
         <slot />
@@ -28,7 +18,26 @@
 </template>
 
 <script setup>
-import { AppLogo, AppMenu } from '@/components/Application'
+import { useAppStore } from '@/stores/app'
+import { AppMenu, AppHeader } from '@/components/Application'
+import { computed } from 'vue'
 
-const changeColor = () => { }
+const appStore = useAppStore()
+// const changeColor = () => { }
+
+const menuCollapse = computed(() => appStore.getMenuCollapse)
+
+const menuBgColor = ref('#1d1d1d')
+const headerBgColor = ref('#191919')
+
 </script>
+
+<style lang="scss" scoped>
+.menu-bg {
+  background-color: v-bind(menuBgColor);
+}
+
+.header-bg {
+  background-color: v-bind(headerBgColor);
+}
+</style>

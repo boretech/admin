@@ -4,24 +4,24 @@ export const useAppStore = defineStore('app', {
   state: () => ({
     darkMode: 'dark',
     layout: 'DefaultLayout',
-    menuCollapse: true,
-    appTitle: import.meta.env.VITE_APP_NAME
+    menuCollapse: false,
+    appTitle: import.meta.env.VITE_APP_NAME,
+    tagsViewEnable: true
   }),
   getters: {
-    getLayout (state) {
-      return state.layout
+    getLayout () {
+      return this.layout
     },
-    getAppTitle (state) {
-      return state.appTitle
+    getAppTitle () {
+      return this.appTitle
     },
-    getMenuCollapse (state) {
-      console.log(state.menuCollapse)
-      return state.menuCollapse
+    getMenuCollapse () {
+      return this.menuCollapse
     }
   },
   actions: {
-    toggleMenuCollapse (state) {
-      state.menuCollapse = !state.menuCollapse
+    toggleMenuCollapse () {
+      this.menuCollapse = !this.menuCollapse
     }
   }
 })
