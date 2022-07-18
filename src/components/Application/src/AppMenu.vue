@@ -6,6 +6,7 @@
       mode="vertical"
       :collapse="menuCollapse"
       :collapse-transition="false"
+      @select="getIndex"
     >
       <el-sub-menu index="1">
         <template #title>
@@ -15,8 +16,11 @@
             class="ml-2"
           >Dashboard</span>
         </template>
-        <el-menu-item>工作台</el-menu-item>
-        <el-menu-item>分析数据</el-menu-item>
+        <el-menu-item index="1-1">工作台</el-menu-item>
+        <el-menu-item index="1-2">分析数据</el-menu-item>
+        <el-menu-item route=true index="/input">项目上传</el-menu-item>
+
+        
       </el-sub-menu>
     </el-menu>
     <!-- <el-button
@@ -32,10 +36,21 @@
 import { useAppStore } from '@/stores/app'
 import { computed, onMounted } from 'vue'
 import AppLogo from './AppLogo.vue'
+import { useRoute ,useRouter } from 'vue-router';
+const router = useRouter()
 const appStore = useAppStore()
 // console.log(appStore)
 const menuCollapse = computed(() => appStore.getMenuCollapse)
 // console.log(menuCollapse.value)
+
+function getIndex(index){
+  console.log(index);
+  router.push({
+    path:index,
+  })
+
+
+}
 
 onMounted(() => {
   // console.log(menuCollapse.value)

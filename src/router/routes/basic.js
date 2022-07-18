@@ -1,118 +1,144 @@
-import Layout from '@/layout/index.vue'
+import Layout from "@/layout/index.vue";
 
 const RootRoute = {
-  path: '/',
-  name: 'Root',
+  path: "/",
+  name: "Root",
   component: Layout,
-  redirect: '/dashboard',
+  redirect: "/dashboard",
   meta: {
-    title: import.meta.env.VITE_APP_NAME
-  }
-}
+    title: import.meta.env.VITE_APP_NAME,
+  },
+};
 
 const LoginRoute = {
-  path: '/login',
-  name: 'Login',
-  component: () => import('@/views/Login.vue'),
+  path: "/login",
+  name: "Login",
+  component: () => import("@/views/Login.vue"),
   meta: {
-    title: '登录'
-  }
-}
+    title: "登录",
+  },
+};
 
 const UnauthorizedRoute = {
-  path: '/401',
-  name: 'Unauthorized',
+  path: "/401",
+  name: "Unauthorized",
   component: Layout,
   meta: {
-    title: '无权访问'
+    title: "无权访问",
   },
   children: [
     {
-      path: '/401',
-      name: 'Unauthorized',
-      component: () => import('@/views/Unauthorized.vue'),
+      path: "/401",
+      name: "Unauthorized",
+      component: () => import("@/views/Unauthorized.vue"),
       meta: {
-        title: '无权访问'
-      }
-    }
-  ]
-}
+        title: "无权访问",
+      },
+    },
+  ],
+};
 
 const InternalServerErrorRoute = {
-  path: '/500',
-  name: 'InternalServerError',
+  path: "/500",
+  name: "InternalServerError",
   component: Layout,
   meta: {
-    title: '服务器内部错误'
+    title: "服务器内部错误",
   },
   children: [
     {
-      path: '/500',
-      name: 'InternalServerError',
-      component: () => import('@/views/InternalServerError.vue'),
+      path: "/500",
+      name: "InternalServerError",
+      component: () => import("@/views/InternalServerError.vue"),
       meta: {
-        title: '服务器内部错误'
-      }
-    }
-  ]
-}
+        title: "服务器内部错误",
+      },
+    },
+  ],
+};
 
 const NotFoundRoute = {
-  path: '/:path(.*)*',
-  name: 'NotFound',
+  path: "/:path(.*)*",
+  name: "NotFound",
   component: Layout,
   meta: {
-    title: '未找到'
+    title: "未找到",
   },
   children: [
     {
-      path: '/:path(.*)*',
-      name: 'NotFound',
-      component: () => import('@/views/NotFound.vue'),
+      path: "/:path(.*)*",
+      name: "NotFound",
+      component: () => import("@/views/NotFound.vue"),
       meta: {
-        title: '未找到'
-      }
-    }
-  ]
-}
+        title: "未找到",
+      },
+    },
+  ],
+};
 
 const DashboardRoute = {
-  path: '/dashboard',
-  name: 'Dashboard',
+  path: "/dashboard",
+  name: "Dashboard",
   component: Layout,
   meta: {
-    title: '欢迎'
+    title: "欢迎",
   },
   children: [
     {
-      path: '',
-      name: 'Dashboard',
-      component: () => import('@/views/Dashboard.vue'),
+      path: "",
+      name: "Dashboard",
+      component: () => import("@/views/Dashboard.vue"),
       meta: {
-        title: '欢迎'
-      }
-    }
-  ]
-}
+        title: "欢迎",
+      },
+    },
+    {
+      path: "/Input",
+      name: "Input",
+      component: () => import("@/views/Input.vue"),
+      meta: {
+        title: "你好",
+      },
+    },
+  ],
+};
+const InputRoute = {
+  path: "/input",
+  name: "Input",
+  component: Layout,
+  meta: {
+    title: "欢迎",
+  },
+  children: [
+    {
+      path: "/Input",
+      name: "Input",
+      component: () => import("@/views/Input.vue"),
+      meta: {
+        title: "欢迎",
+      },
+    },
+  ],
+};
 
 const RedirectRoute = {
-  path: '/redirect',
-  name: 'Redirect',
+  path: "/redirect",
+  name: "Redirect",
   component: Layout,
   meta: {
-    title: '正在跳转'
+    title: "正在跳转",
   },
   children: [
     {
-      path: '/redirect/:path(.*)',
-      name: 'Redirect',
-      component: () => import('@/views/Redirect.vue'),
+      path: "/redirect/:path(.*)",
+      name: "Redirect",
+      component: () => import("@/views/Redirect.vue"),
       meta: {
-        title: '正在跳转'
-      }
-    }
-  ]
-}
+        title: "正在跳转",
+      },
+    },
+  ],
+};
 
 export const basicRoutes = [
   LoginRoute,
@@ -121,8 +147,9 @@ export const basicRoutes = [
   RedirectRoute,
   InternalServerErrorRoute,
   UnauthorizedRoute,
-  NotFoundRoute
-]
+  NotFoundRoute,
+  InputRoute,
+];
 
 // export const staticRoute = {
 //   path: '/',

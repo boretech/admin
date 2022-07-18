@@ -6,6 +6,7 @@
   />
   <icon icon="logo" />
   <icon icon="ep:apple" />
+  <h2>你好</h2>
 </template>
 
 <script setup>
