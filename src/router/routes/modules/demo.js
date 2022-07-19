@@ -20,6 +20,3 @@ export const promotionRoute = {
   ]
 }
 
-export default {
-  promotionRoute
-}
