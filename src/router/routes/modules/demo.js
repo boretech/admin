@@ -6,7 +6,8 @@ export const promotionRoute = {
   component: Layout,
   redirect: '/promotion/icons',
   meta: {
-    title: '功能'
+    title: '功能',
+    menu: true
   },
   children: [
     {
@@ -14,7 +15,8 @@ export const promotionRoute = {
       name: 'Icons',
       component: () => import('@/views/promotion/Icons.vue'),
       meta: {
-        title: '图标'
+        title: '图标',
+        menu: true
       }
     }
   ]

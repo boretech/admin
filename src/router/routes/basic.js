@@ -6,7 +6,8 @@ const RootRoute = {
   component: Layout,
   redirect: '/dashboard',
   meta: {
-    title: import.meta.env.VITE_APP_NAME
+    title: import.meta.env.VITE_APP_NAME,
+    menu: false
   }
 }
 
@@ -15,7 +16,8 @@ const LoginRoute = {
   name: 'Login',
   component: () => import('@/views/Login.vue'),
   meta: {
-    title: '登录'
+    title: '登录',
+    menu: false
   }
 }
 
@@ -24,15 +26,17 @@ const UnauthorizedRoute = {
   name: 'Unauthorized',
   component: Layout,
   meta: {
-    title: '无权访问'
+    title: '无权访问',
+    menu: false
   },
   children: [
     {
-      path: '/401',
+      path: '',
       name: 'Unauthorized',
       component: () => import('@/views/Unauthorized.vue'),
       meta: {
-        title: '无权访问'
+        title: '无权访问',
+        menu: false
       }
     }
   ]
@@ -43,7 +47,8 @@ const InternalServerErrorRoute = {
   name: 'InternalServerError',
   component: Layout,
   meta: {
-    title: '服务器内部错误'
+    title: '服务器内部错误',
+    menu: false
   },
   children: [
     {
@@ -51,7 +56,8 @@ const InternalServerErrorRoute = {
       name: 'InternalServerError',
       component: () => import('@/views/InternalServerError.vue'),
       meta: {
-        title: '服务器内部错误'
+        title: '服务器内部错误',
+        menu: false
       }
     }
   ]
@@ -62,7 +68,8 @@ const NotFoundRoute = {
   name: 'NotFound',
   component: Layout,
   meta: {
-    title: '未找到'
+    title: '未找到',
+    menu: false
   },
   children: [
     {
@@ -70,7 +77,8 @@ const NotFoundRoute = {
       name: 'NotFound',
       component: () => import('@/views/NotFound.vue'),
       meta: {
-        title: '未找到'
+        title: '未找到',
+        menu: false
       }
     }
   ]
@@ -81,15 +89,26 @@ const DashboardRoute = {
   name: 'Dashboard',
   component: Layout,
   meta: {
-    title: '欢迎'
+    title: 'Dashboard',
+    menu: true
   },
   children: [
     {
       path: '',
       name: 'Dashboard',
-      component: () => import('@/views/Dashboard.vue'),
+      component: () => import('@/views/Dashboard/Dashboard.vue'),
       meta: {
-        title: '欢迎'
+        title: '工作台',
+        menu: true
+      }
+    },
+    {
+      path: 'databoard',
+      name: 'Databoard',
+      component: () => import('@/views/Dashboard/Databoard.vue'),
+      meta: {
+        title: '数据分析',
+        menu: true
       }
     }
   ]
@@ -100,7 +119,8 @@ const RedirectRoute = {
   name: 'Redirect',
   component: Layout,
   meta: {
-    title: '正在跳转'
+    title: '正在跳转',
+    menu: false
   },
   children: [
     {
@@ -108,7 +128,8 @@ const RedirectRoute = {
       name: 'Redirect',
       component: () => import('@/views/Redirect.vue'),
       meta: {
-        title: '正在跳转'
+        title: '正在跳转',
+        menu: false
       }
     }
   ]

@@ -40,7 +40,7 @@ export default defineConfig(({ command, mode }) => {
       https: VITE_HTTPS,
       host: true,
       open: VITE_OPEN,
-      port: VITE_PORT || 3000,
+      port: VITE_PORT || 5173,
       proxy: setupProxy(VITE_PROXY, mode)
     },
     esbuild: {
