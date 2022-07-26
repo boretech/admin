@@ -18,10 +18,13 @@
         </template>
         <el-menu-item index="1-1">工作台</el-menu-item>
         <el-menu-item index="1-2">分析数据</el-menu-item>
-        <el-menu-item route=true index="/input">项目上传</el-menu-item>
-
-        
+        <el-menu-item route=true index="/input">项目上传</el-menu-item>    
+        <el-menu-item route=true index="/Statistical">项目统计</el-menu-item>    
       </el-sub-menu>
+      <el-menu-item index="4">
+        <i class="el-icon-setting"></i>
+        <span>导航四</span>
+      </el-menu-item>
     </el-menu>
     <!-- <el-button
       type="primary"
@@ -37,6 +40,7 @@ import { useAppStore } from '@/stores/app'
 import { computed, onMounted } from 'vue'
 import AppLogo from './AppLogo.vue'
 import { useRoute ,useRouter } from 'vue-router';
+
 const router = useRouter()
 const appStore = useAppStore()
 // console.log(appStore)
@@ -48,8 +52,6 @@ function getIndex(index){
   router.push({
     path:index,
   })
-
-
 }
 
 onMounted(() => {

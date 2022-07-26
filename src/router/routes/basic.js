@@ -92,14 +92,14 @@ const DashboardRoute = {
         title: "欢迎",
       },
     },
-    {
-      path: "/Input",
-      name: "Input",
-      component: () => import("@/views/Input.vue"),
-      meta: {
-        title: "你好",
-      },
-    },
+    // {
+    //   path: "/Input",
+    //   name: "Input",
+    //   component: () => import("@/views/Input.vue"),
+    //   meta: {
+    //     title: "你好",
+    //   },
+    // },
   ],
 };
 const InputRoute = {
@@ -114,6 +114,24 @@ const InputRoute = {
       path: "/Input",
       name: "Input",
       component: () => import("@/views/Input.vue"),
+      meta: {
+        title: "欢迎",
+      },
+    },
+  ],
+};
+const StatisticalRoute = {
+  path: "/statistical",
+  name: "Statistical",
+  component: Layout,
+  meta: {
+    title: "欢迎",
+  },
+  children: [
+    {
+      path: "/Statistical",
+      name: "Statistical",
+      component: () => import("@/views/Statistical.vue"),
       meta: {
         title: "欢迎",
       },
@@ -149,6 +167,7 @@ export const basicRoutes = [
   UnauthorizedRoute,
   NotFoundRoute,
   InputRoute,
+  StatisticalRoute,
 ];
 
 // export const staticRoute = {

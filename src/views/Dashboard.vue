@@ -7,9 +7,11 @@
   <icon icon="logo" />
   <icon icon="ep:apple" />
   <h2>你好</h2>
+  <!-- <Quantity></Quantity> -->
 </template>
 
 <script setup>
+// import Quantity from '@/components/Quantity.vue'
 defineOptions({
   name: ''
 })

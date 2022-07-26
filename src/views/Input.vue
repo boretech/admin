@@ -14,20 +14,32 @@
         <el-input v-model="form.address"  class="input" placeholder="请输入地址"></el-input>
       </el-form-item>
       <el-form-item label="项目类型">
-        <el-checkbox-group v-model="form.type">
-          <el-checkbox label="推文类" name="type"></el-checkbox>
-          <el-checkbox label="游戏类" name="type"></el-checkbox>
-          <el-checkbox label="展示类" name="type"></el-checkbox>
-          <el-checkbox label="交互类" name="type"></el-checkbox>
-          <el-checkbox label="登记类" name="type"></el-checkbox>
-        </el-checkbox-group>
+      <el-radio-group v-model="form.radio">
+        <el-radio :label="3">推文类</el-radio>
+        <el-radio :label="6">游戏类</el-radio>
+        <el-radio :label="9">交互类</el-radio>
+      </el-radio-group>
       </el-form-item>
-      <el-form-item label="截止时间">
-        <el-col :span="11">
-          <el-date-picker type="date" placeholder="选择日期" v-model="form.date1" style="width: 100%;"></el-date-picker>
-        </el-col>
-      </el-form-item>
-    </el-form>
+      <el-form-item label="时间">
+        <el-date-picker
+      v-model="form.value1"
+      type="daterange"
+      range-separator="至"
+      start-placeholder="开始日期"
+      end-placeholder="结束日期">
+    </el-date-picker>
+    </el-form-item >
+ <el-form-item label="队员">
+    <el-select v-model="value" placeholder="请选择队员">
+    <el-option
+      v-for="item in form.options"
+      :key="item.value"
+      :label="item.label"
+      :value="item.value">
+    </el-option>
+  </el-select>
+  </el-form-item>
+</el-form>
 
   </div>
 
@@ -41,8 +53,24 @@
           name:'',
           phone:'',
           address:'',
-          project:'',
-          type:[],
+          value1:'',
+          radio:3,
+            options: [{
+          value: '选项1',
+          label: 'zrj'
+        }, {
+          value: '选项2',
+          label: 'hd'
+        }, {
+          value: '选项3',
+          label: 'lbk'
+        }, {
+          value: '选项4',
+          label: 'ca'
+        }, {
+          value: '选项5',
+          label: 'hhs'
+        }],
         }
         
       }
